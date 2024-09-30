@@ -5,6 +5,7 @@
     padding-top: 24px;
 
     @media only screen and (max-width: 1119px) {
+        display: block;
         justify-content: unset;
         padding: 16px 16px 0px;
     }
@@ -130,6 +131,13 @@
     margin-block: 4px;
     border-radius: 16px;
 
+    @media only screen and (max-width: 1119px) {
+        width: 53px;
+        height: 4px;
+        margin: 0;
+        margin-inline: 4px;
+    }
+
 }
 
 .stemActive {
@@ -140,4 +148,71 @@
     @media only screen and (max-width: 1119px) {
         display: none;
     }
+}
+
+indicatorContainerMobile {
+    display: none;
+
+    @media only screen and (max-width: 1119px) {
+        display: block;
+    }
+
+}
+
+.stepContainerMobile {
+    display: none;
+
+    @media only screen and (max-width: 1119px) {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        margin-top: 16px;
+        margin-bottom: 24px;
+    }
+}
+
+.circlePanel {
+    width: 56px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (max-width: 1119px) {
+        width: 100%;
+        height: 36px;
+        flex-direction: row;
+    }
+}
+
+.stepText {
+    white-space: nowrap;
+    display: none;
+    align-items: flex-end;
+    margin: 0;
+    margin-left: 24px;
+    margin-bottom: 12px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #00184A;
+
+    @media only screen and (max-width: 1119px) {
+        margin: 0;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        margin-top: 8px;
+        justify-content: end;
+        align-items: unset;
+    }
+}
+
+.stepTextActive {
+    display: flex;
 }

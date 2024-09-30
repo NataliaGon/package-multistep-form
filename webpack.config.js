@@ -15,16 +15,16 @@ module.exports = {
                 use: 'babel-loader',
             },
             {
-                test: /\.css$/, // Rule for CSS files
-                use: ['style-loader', 'css-loader'], // Process CSS with these loaders
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.svg$/,  // Add a rule to handle SVG files
+                test: /\.svg$/,
                 use: [
                     {
                         loader: 'svg-url-loader',
                         options: {
-                            limit: 10000, // Inlining images smaller than 10kB as base64
+                            limit: 10000,
                         },
                     },
                 ],

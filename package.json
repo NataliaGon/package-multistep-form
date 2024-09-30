@@ -1,6 +1,6 @@
 {
-  "name": "test-dont-install",
-  "version": "1.0.4",
+  "name": "its-test-dont-intall",
+  "version": "1.0.6",
   "description": "Multistep form",
   "main": "dist/index.js",
   "scripts": {
