@@ -16,20 +16,20 @@ const StepsIndicatorMobile = ({ step, stepsAmount }) => {
 
     return (
         <div className={"stepContainerMobile"}>
-            {getStepsIndicator().map(item => <div className={"step"} key={item}>
-                <div className={"circlePanel"} >
-                    {item > 1 && <div className={cx("stem", {
+            {getStepsIndicator().map(item => <div className={"stepMobile"} key={item}>
+                <div className={"circlePanelMobile"} >
+                    {item > 1 && <div className={cx("stemMobile", {
                         ["stemActive"]: item === step || step > item
                     })}></div>}
-                    <div className={cx("circle", {
+                    <div className={cx("circleMobile", {
                         ["circleActive"]: item === step || step > item
                     })}>
-                        {step > item ? <Icon name={CheckedIcon} /> : <div className={cx("circleIn", {
+                        {step > item ? <Icon name={CheckedIcon} /> : <div className={cx("circleInMobile", {
                             ["circleInActive"]: item === step || step > item
                         })}></div>}
                     </div>
                 </div>
-                <div className={cx("stepText", {
+                <div className={cx("stepTextMobile", {
                     ["stepTextActive"]: item === step
                 })}>Step {step}</div>
             </div>

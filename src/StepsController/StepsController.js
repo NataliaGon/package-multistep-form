@@ -5,17 +5,10 @@ import StepsIndicatorMobile from "./StepsIndicatorMobile";
 import "./StepsController.css";
 
 const StepsController = ({ steps, manageNextStepValidation = () => true, formTitle, breakpoint = 1119 }) => {
+
     const [step, setStep] = useState(1);
-
-    const stepsAmount = steps.length;
-
-    const onNextStep = () => {
-        if (manageNextStepValidation(step) && step !== stepsAmount) {
-            setStep(step + 1)
-        }
-    }
-
     const [isMobile, setIsMobile] = useState(false);
+    const stepsAmount = steps.length;
 
     useEffect(() => {
         const handleResize = () => {
@@ -29,23 +22,28 @@ const StepsController = ({ steps, manageNextStepValidation = () => true, formTit
         return () => window.removeEventListener('resize', handleResize);
     }, [breakpoint]);
 
+    const onNextStep = () => {
+        if (manageNextStepValidation(step) && step !== stepsAmount) {
+            setStep(step + 1)
+        }
+    }
 
     return (
-        <div className={"container"}>
-            <div className={"indicatorContainer"}>
+        <div className={isMobile ? "containerMobile" : "container"}>
+            {!isMobile && <div>
                 {formTitle && <h1 className={"title"}>{formTitle}</h1>}
                 <StepsIndicator
                     step={step}
                     stepsAmount={stepsAmount}
                 />
-            </div>
-            <div className={"indicatorContainerMobile"}>
+            </div>}
+            {isMobile && <div>
                 {formTitle && <h1 className={"title"}>{formTitle}</h1>}
                 < StepsIndicatorMobile
                     step={step}
                     stepsAmount={stepsAmount} />
-            </div>
-            <div className={"formContainer"}>
+            </div>}
+            <div className={isMobile ? "formContainerMobile" : "formContainer"}>
                 <div> {
                     steps[step - 1]
                 }</div>

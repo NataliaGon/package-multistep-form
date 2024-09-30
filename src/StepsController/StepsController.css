@@ -3,25 +3,28 @@
     flex-direction: row;
     padding-inline: 180px;
     padding-top: 24px;
+}
 
-    @media only screen and (max-width: 1119px) {
-        display: block;
-        justify-content: unset;
-        padding: 16px 16px 0px;
-    }
+.containerMobile {
+    flex-direction: row;
+    display: block;
+    justify-content: unset;
+    padding: 16px 16px 0px;
 }
 
 .formContainer {
     margin-left: 72px;
     width: 100%;
     height: 100%;
+}
 
-    @media only screen and (max-width: 1119px) {
-        margin-top: unset;
-        margin: auto;
-        width: 100%;
-        height: unset;
-    }
+.formContainerMobile {
+    margin-left: 72px;
+    width: 100%;
+    height: 100%;
+    margin-top: unset;
+    margin: auto;
+    height: unset;
 }
 
 .title {
@@ -72,11 +75,13 @@
     width: 100%;
     height: fit-content;
     flex-direction: row;
+}
 
-    @media only screen and (max-width: 1119px) {
-        width: fit-content;
-        flex-direction: column;
-    }
+.stepMobile {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    flex-direction: column;
 }
 
 .circleContainer {
@@ -95,11 +100,16 @@
     height: 56px;
     border-radius: 100%;
     border: 4px solid #f5f5f5;
+}
 
-    @media only screen and (max-width: 1119px) {
-        width: 36px;
-        height: 36px;
-    }
+.circleMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 4px solid #f5f5f5;
+    width: 36px;
+    height: 36px
 }
 
 .circleIn {
@@ -107,11 +117,13 @@
     height: 24px;
     border-radius: 100%;
     background: #f5f5f5;
+}
 
-    @media only screen and (max-width: 1119px) {
-        width: 20px;
-        height: 20px;
-    }
+.circleInMobile {
+    border-radius: 100%;
+    background: #f5f5f5;
+    width: 20px;
+    height: 20px;
 }
 
 .circleActive {
@@ -130,46 +142,32 @@
     background: #f5f5f5;
     margin-block: 4px;
     border-radius: 16px;
+}
 
-    @media only screen and (max-width: 1119px) {
-        width: 53px;
-        height: 4px;
-        margin: 0;
-        margin-inline: 4px;
-    }
-
+.stemMobile {
+    display: block;
+    background: #f5f5f5;
+    margin-block: 4px;
+    border-radius: 16px;
+    width: 53px;
+    height: 4px;
+    margin: 0;
+    margin-inline: 4px;
 }
 
 .stemActive {
     background-color: #00184A;
 }
 
-.indicatorContainer {
-    @media only screen and (max-width: 1119px) {
-        display: none;
-    }
-}
-
-indicatorContainerMobile {
-    display: none;
-
-    @media only screen and (max-width: 1119px) {
-        display: block;
-    }
-
-}
 
 .stepContainerMobile {
     display: none;
-
-    @media only screen and (max-width: 1119px) {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 100%;
-        margin-top: 16px;
-        margin-bottom: 24px;
-    }
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-top: 16px;
+    margin-bottom: 24px;
 }
 
 .circlePanel {
@@ -178,12 +176,14 @@ indicatorContainerMobile {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
 
-    @media only screen and (max-width: 1119px) {
-        width: 100%;
-        height: 36px;
-        flex-direction: row;
-    }
+.circlePanelMobile {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 36px;
+    flex-direction: row;
 }
 
 .stepText {
@@ -199,19 +199,25 @@ indicatorContainerMobile {
     font-size: 20px;
     line-height: 150%;
     color: #00184A;
-
-    @media only screen and (max-width: 1119px) {
-        margin: 0;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 150%;
-        margin-top: 8px;
-        justify-content: end;
-        align-items: unset;
-    }
 }
+
+.stepTextMobile {
+    white-space: nowrap;
+    display: none;
+    margin-left: 24px;
+    margin-bottom: 12px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    color: #00184A;
+    margin: 0;
+    font-size: 12px;
+    margin-top: 8px;
+    justify-content: end;
+    align-items: unset;
+}
+
 
 .stepTextActive {
     display: flex;
