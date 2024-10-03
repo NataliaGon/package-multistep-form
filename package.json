@@ -1,6 +1,6 @@
 {
   "name": "multistep-react-form",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Multistep form",
   "main": "dist/index.js",
   "scripts": {
@@ -22,6 +22,10 @@
     "react-inlinesvg": "^4.1.3",
     "style-loader": "^4.0.0",
     "svg-url-loader": "^8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NataliaGon/package-multistep-form"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

@@ -38,12 +38,12 @@ import React from 'react';
 import StepsController from 'multistep-react-form';
 
 const steps = [
-    <StepOneForm />,
-    <StepTwoForm />,
-    <StepThreeForm />
+    <StepOneForm formData={formData} validationError={validationError} handleFieldChange={handleFieldChange} />,
+    <StepTwoForm formData={formData} validationError={validationError} handleFieldChange={handleFieldChange} />,
+    <StepThreeForm formData={formData} validationError={validationError} handleFieldChange={handleFieldChange} />
 ];
 
-const manageNextStepValidation = (currentStep) => {
+const manageNextStep = (currentStep) => {
     // Example validation logic
     if (currentStep === 1 && !formData.name) {
         return false; // Prevent navigation if name is not provided
