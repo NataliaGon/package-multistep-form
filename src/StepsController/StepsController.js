@@ -4,7 +4,7 @@ import StepsIndicator from "./StepsIndicator";
 import StepsIndicatorMobile from "./StepsIndicatorMobile";
 import "./StepsController.css";
 
-const StepsController = ({ steps, manageNextStepValidation = () => true, formTitle, breakpoint = 1119 }) => {
+const StepsController = ({ steps, manageNextStep = () => true, title, breakpoint = 1119 }) => {
 
     const [step, setStep] = useState(1);
     const [isMobile, setIsMobile] = useState(false);
@@ -23,7 +23,7 @@ const StepsController = ({ steps, manageNextStepValidation = () => true, formTit
     }, [breakpoint]);
 
     const onNextStep = () => {
-        if (manageNextStepValidation(step) && step !== stepsAmount) {
+        if (manageNextStep(step) && step !== stepsAmount) {
             setStep(step + 1)
         }
     }
@@ -31,14 +31,14 @@ const StepsController = ({ steps, manageNextStepValidation = () => true, formTit
     return (
         <div className={isMobile ? "containerMobile" : "container"}>
             {!isMobile && <div>
-                {formTitle && <h1 className={"title"}>{formTitle}</h1>}
+                {title && <h1 className={"title"}>{title}</h1>}
                 <StepsIndicator
                     step={step}
                     stepsAmount={stepsAmount}
                 />
             </div>}
             {isMobile && <div>
-                {formTitle && <h1 className={"title"}>{formTitle}</h1>}
+                {title && <h1 className={"title"}>{title}</h1>}
                 < StepsIndicatorMobile
                     step={step}
                     stepsAmount={stepsAmount} />
