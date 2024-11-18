@@ -1,6 +1,6 @@
 {
   "name": "multistep-react-form",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Multistep form",
   "main": "dist/index.js",
   "scripts": {

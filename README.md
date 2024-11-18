@@ -2,6 +2,11 @@
 
 > A React component package to create customizable, multi-step forms. This package includes a `StepsController` component for managing form steps, validation, and responsiveness.
 
+<kbd>
+<img height="350px" src="https://res.cloudinary.com/ecohub/image/upload/v1727967730/form-steps/Screen_Shot_2024-10-03_at_18.00.52_vmwvzv.png"/>
+</kbd>
+
+
 ## Features
 - Create customizable multi-step forms.
 - Add custom validation logic for step transitions.
@@ -26,7 +31,7 @@ The StepsController component manages the overall structure of the multi-step fo
 | title          | The title displayed at the top of the form.                  |string       |''          |false      |
 | breakpoint     | The width breakpoint for responsive design.                  |number       |1119        |false      |
 | manageNextStep | A function that manages validation logic.                    |function     |() => true  |false      |
-| steps          | An array of step, each containing a  component to render.    |Array        |[]          |true       |
+| steps          | An array of steps, each containing a  component to render.    |Array        |[]          |true       |
 
 
 ### Example
